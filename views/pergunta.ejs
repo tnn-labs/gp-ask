@@ -15,6 +15,20 @@
       <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
       <button type="submit" class="btn btn-primary">Responder</button>
     </form>
+    <hr>
+
+    <h3>Respostas</h3>
+    <hr>
+    <% if(respostas !== null) { %>
+      <% respostas.forEach(resposta => { %>
+       <div class="card">
+         <div class="card-body">
+           <p><%= resposta.corpo %></p>
+         </div>
+       </div>
+       <br>
+      <% }) %>    
+    <% } %>
   </div>
 </body>
 <%- include('partials/footer.ejs') %>
